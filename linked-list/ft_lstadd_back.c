@@ -6,15 +6,15 @@
 /*   By: ppereira <ppereira@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/25 13:34:05 by ppereira          #+#    #+#             */
-/*   Updated: 2022/05/04 17:29:51 by ppereira         ###   ########.fr       */
+/*   Updated: 2022/05/05 16:02:36 by ppereira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "linked-list.h"
 
-void	ft_lstadd_back(t_list **lst, t_list *new)
+void	ft_lstadd_back(t_ptlist *lst, t_ptlist new)
 {
-	t_list	*temp;
+	t_ptlist	temp;
 
 	if (!(*lst))
 		*lst = new;

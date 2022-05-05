@@ -6,15 +6,15 @@
 /*   By: ppereira <ppereira@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/25 13:37:26 by ppereira          #+#    #+#             */
-/*   Updated: 2022/05/04 17:30:01 by ppereira         ###   ########.fr       */
+/*   Updated: 2022/05/05 16:03:07 by ppereira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "linked-list.h"
 
-void	ft_lstclear(t_list **lst, void (*del)(void*))
+void	ft_lstclear(t_ptlist *lst, void (*del)(void*))
 {
-	t_list	*tmp;
+	t_ptlist	tmp;
 
 	if (!lst)
 		return ;

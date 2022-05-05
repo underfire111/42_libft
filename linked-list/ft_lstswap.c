@@ -6,13 +6,13 @@
 /*   By: ppereira <ppereira@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/23 13:03:32 by ppereira          #+#    #+#             */
-/*   Updated: 2022/05/04 17:31:05 by ppereira         ###   ########.fr       */
+/*   Updated: 2022/05/05 16:07:04 by ppereira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "linked-list.h"
 
-void	ft_lstswap(t_list *n1, t_list *n2)
+void	ft_lstswap(t_ptlist n1, t_ptlist n2)
 {
 	void	*tmp;
 

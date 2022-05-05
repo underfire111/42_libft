@@ -6,13 +6,13 @@
 /*   By: ppereira <ppereira@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/23 13:03:21 by ppereira          #+#    #+#             */
-/*   Updated: 2022/05/04 17:30:16 by ppereira         ###   ########.fr       */
+/*   Updated: 2022/05/05 16:04:05 by ppereira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "linked-list.h"
 
-long	ft_lstget_max(t_list *lst)
+long	ft_lstget_max(t_ptlist lst)
 {
 	long	max;
 

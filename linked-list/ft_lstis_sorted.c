@@ -6,13 +6,13 @@
 /*   By: ppereira <ppereira@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/23 13:03:27 by ppereira          #+#    #+#             */
-/*   Updated: 2022/05/04 17:30:32 by ppereira         ###   ########.fr       */
+/*   Updated: 2022/05/05 16:05:00 by ppereira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "linked-list.h"
 
-int	ft_lstis_sorted(t_list *lst)
+int	ft_lstis_sorted(t_ptlist lst)
 {
 	int	tmp;
 	

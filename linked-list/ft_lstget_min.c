@@ -6,13 +6,13 @@
 /*   By: ppereira <ppereira@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/23 13:05:19 by ppereira          #+#    #+#             */
-/*   Updated: 2022/05/04 17:30:23 by ppereira         ###   ########.fr       */
+/*   Updated: 2022/05/05 16:04:48 by ppereira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "linked-list.h"
 
-long	ft_lstget_min(t_list *lst)
+long	ft_lstget_min(t_ptlist lst)
 {
 	long	min;
 

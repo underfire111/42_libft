@@ -6,13 +6,13 @@
 /*   By: ppereira <ppereira@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/25 13:41:38 by ppereira          #+#    #+#             */
-/*   Updated: 2022/05/04 17:30:40 by ppereira         ###   ########.fr       */
+/*   Updated: 2022/05/05 16:06:41 by ppereira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "linked-list.h"
 
-t_list	*ft_lstlast(t_list *lst)
+t_ptlist	ft_lstlast(t_ptlist lst)
 {
 	if (!lst)
 		return (NULL);

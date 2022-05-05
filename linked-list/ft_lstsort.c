@@ -6,16 +6,16 @@
 /*   By: ppereira <ppereira@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/23 13:03:29 by ppereira          #+#    #+#             */
-/*   Updated: 2022/05/04 17:30:58 by ppereira         ###   ########.fr       */
+/*   Updated: 2022/05/05 16:06:20 by ppereira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "linked-list.h"
 
-void	ft_lstsort(t_list **lst, int len)
+void	ft_lstsort(t_ptlist *lst, int len)
 {
-	t_list	*current_node;
-	t_list	*next_node;	
+	t_ptlist	current_node;
+	t_ptlist	next_node;	
 
 	current_node = (*lst);
 	while (ft_lstget_index((*lst) , (long)current_node->content) < len - 1)
