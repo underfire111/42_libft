@@ -6,12 +6,12 @@
 /*   By: ppereira <ppereira@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/23 13:05:07 by ppereira          #+#    #+#             */
-/*   Updated: 2022/05/05 16:10:20 by ppereira         ###   ########.fr       */
+/*   Updated: 2022/05/11 17:14:37 by ppereira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#if !defined(LIST_H)
-# define LIST_H
+#if !defined(LINKED_LIST_H)
+# define LINKED_LIST_H
 
 # include <stdlib.h>
 # include <limits.h>

@@ -6,7 +6,7 @@
 /*   By: ppereira <ppereira@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/23 13:03:05 by ppereira          #+#    #+#             */
-/*   Updated: 2022/05/05 16:04:09 by ppereira         ###   ########.fr       */
+/*   Updated: 2022/05/11 16:39:24 by ppereira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@ int	ft_lstget_index(t_ptlist lst, long value)
 	while (lst)
 	{
 		if ((long)lst->content == value)
-			break ;
+			return (index);
 		index++;
 		lst = lst->next;
 	}
-	return (index);
+	return (-1);
 }
