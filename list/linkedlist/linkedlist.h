@@ -1,13 +1,13 @@
 #if !defined(LINKEDLIST_H)
-#define LINKEDLIST_H
+# define LINKEDLIST_H
 
-#define NULL				(void *) 0
-#define LIST_OK				0
-#define LIST_NULL			1
-#define LIST_NO_MEMORY		2
-#define LIST_EMPTY			3
-#define LIST_FULL			4
-#define LIST_INVALID_RANK	5
+# define NULL				((void *) 0)
+# define LIST_OK			0
+# define LIST_NULL			1
+# define LIST_NO_MEMORY		2
+# define LIST_EMPTY			3
+# define LIST_FULL			4
+# define LIST_INVALID_RANK	5
 
 struct			s_node;
 struct			s_linklist;
