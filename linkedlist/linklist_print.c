@@ -1,7 +1,7 @@
 #include "linklist_node.h"
 #include "../put/put.h"
 
-void	linklist_print(pt_linklist list, void (*print)(void *))
+void	linklist_print(pt_linklist list, void (*print)(t_elem))
 {
 	int		rank;
 	pt_node current;

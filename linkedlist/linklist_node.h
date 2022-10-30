@@ -2,12 +2,11 @@
 #define LINKLIST_NODE_H
 
 # include "linkedlist.h"
-
 # include <stdlib.h>
 
 typedef struct	s_node
 {
-	void	*elem;
+	t_elem	elem;
 	pt_node	next;
 	pt_node	prev;
 }	t_node;

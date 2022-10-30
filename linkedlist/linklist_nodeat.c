@@ -1,6 +1,6 @@
 #include "linklist_node.h"
 
-static pt_node	linklist_nodeat(pt_linklist list, int rank)
+pt_node	linklist_nodeat(pt_linklist list, int rank)
 {
 	int		curent_rank;
 	pt_node	current_node;

@@ -1,6 +1,8 @@
 #if !defined(LINKEDLIST_H)
 #define LINKEDLIST_H
 
+# include "linklist_elem.h"
+
 #define NULL				(void *) 0
 #define LIST_OK				0
 #define LIST_NULL			1
@@ -18,13 +20,13 @@ pt_linklist	linklist_create();
 
 int			linklist_destroy(pt_linklist *list);
 
-int			linklist_add(pt_linklist list, int rank, void *elem);
+int			linklist_add(pt_linklist list, int rank, t_elem elem);
 
-int			linklist_remove(pt_linklist list, int rank, void *elem);
+int			linklist_remove(pt_linklist list, int rank, t_elem *elem);
 
-int			linklist_get(pt_linklist list, int rank, void *elem);
+int			linklist_get(pt_linklist list, int rank, t_elem *elem);
 
-int			linklist_set(pt_linklist list, int rank, void *new_elem, void *old_elem);
+int			linklist_set(pt_linklist list, int rank, t_elem new_elem, t_elem *old_elem);
 
 int			linklist_size(pt_linklist list, int *size);
 
@@ -32,6 +34,6 @@ int			linklist_isempty(pt_linklist list);
 
 int			linklist_clear(pt_linklist list);
 
-void		linklist_print(pt_linklist list, void (*print)(void *));
+void		linklist_print(pt_linklist list, void (*print)(t_elem));
 
 #endif // LINKEDLIST_H

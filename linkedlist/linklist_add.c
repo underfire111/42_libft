@@ -1,6 +1,6 @@
 #include "linklist_node.h"
 
-int	linklist_add(pt_linklist list, int rank, void *elem)
+int	linklist_add(pt_linklist list, int rank, t_elem elem)
 {
 	pt_node	currnode;
 	pt_node	prevnode;

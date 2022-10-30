@@ -1,6 +1,6 @@
 #include "linklist_node.h"
 
-int	linklist_get(pt_linklist list, int rank, void *elem)
+int	linklist_get(pt_linklist list, int rank, t_elem *elem)
 {
 	pt_node node;
 
@@ -10,6 +10,6 @@ int	linklist_get(pt_linklist list, int rank, void *elem)
 		return (LIST_INVALID_RANK);
 	node = linklist_nodeat(list, rank);
 	if (node)
-		elem = node->elem;
+		*elem = node->elem;
 	return (LIST_OK);
 }

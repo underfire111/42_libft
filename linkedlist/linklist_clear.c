@@ -5,7 +5,7 @@ int	linklist(pt_linklist list)
 	pt_node current;
 	
 	if (!list)
-		return (NULL);
+		return (LIST_NULL);
 	current = list->header->next;
 	while (current != list->trailer)
 	{

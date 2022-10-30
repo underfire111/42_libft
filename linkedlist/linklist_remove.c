@@ -1,6 +1,6 @@
 #include "linklist_node.h"
 
-int	linklist_remove(pt_linklist list, int rank, void *elem)
+int	linklist_remove(pt_linklist list, int rank, t_elem *elem)
 {
 	pt_node currnode;
 	pt_node prevnode;
@@ -17,7 +17,7 @@ int	linklist_remove(pt_linklist list, int rank, void *elem)
 	prevnode = currnode->prev;
 	prevnode->next = nextnode;
 	nextnode->prev = prevnode;
-	elem = currnode->elem;
+	*elem = currnode->elem;
 	free(currnode);
 	list->size--;
 	return (LIST_OK);

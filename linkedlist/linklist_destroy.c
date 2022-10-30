@@ -3,7 +3,6 @@
 int	linklist_destroy(pt_linklist *pt_list)
 {
 	pt_linklist list;
-	pt_node remove;
 	
 	list = *pt_list;
 	if (!list)
