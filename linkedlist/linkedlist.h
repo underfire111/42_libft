@@ -1,65 +1,37 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   linked-list.h                                      :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: ppereira <ppereira@student.42lisboa.com    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/23 13:05:07 by ppereira          #+#    #+#             */
-/*   Updated: 2022/05/11 17:14:37 by ppereira         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
+#if !defined(LINKEDLIST_H)
+#define LINKEDLIST_H
 
-#if !defined(LINKED_LIST_H)
-# define LINKED_LIST_H
+#define NULL				(void *) 0
+#define LIST_OK				0
+#define LIST_NULL			1
+#define LIST_NO_MEMORY		2
+#define LIST_EMPTY			3
+#define LIST_FULL			4
+#define LIST_INVALID_RANK	5
 
-# include <stdlib.h>
-# include <limits.h>
+struct			s_node;
+struct			s_linklist;
+typedef struct	s_node *pt_node;
+typedef struct	s_linklist *pt_linklist;
 
-typedef struct	s_list
-{
-	void			*content;
-	struct s_list	*next;
-}	t_list;
+pt_linklist	linklist_create();
 
-typedef	t_list	*t_ptlist;
+int			linklist_destroy(pt_linklist *list);
 
-void	ft_lstadd_back(t_ptlist *lst, t_ptlist new);
+int			linklist_add(pt_linklist list, int rank, void *elem);
 
-void	ft_lstadd_front(t_ptlist *lst, t_ptlist new);
+int			linklist_remove(pt_linklist list, int rank, void *elem);
 
-void	ft_lstclear(t_ptlist *lst, void (*del)(void*));
+int			linklist_get(pt_linklist list, int rank, void *elem);
 
-void	ft_lstdel_between(t_ptlist *lst, int index);
+int			linklist_set(pt_linklist list, int rank, void *new_elem, void *old_elem);
 
-void	ft_lstdelone(t_ptlist lst, void (*del)(void*));
+int			linklist_size(pt_linklist list, int *size);
 
-t_list	*ft_lstdup(t_ptlist lst);
+int			linklist_isempty(pt_linklist list);
 
-int		ft_lstget_index(t_ptlist lst, long value);
+int			linklist_clear(pt_linklist list);
 
-long	ft_lstget_max(t_ptlist lst);
+void		linklist_print(pt_linklist list, void (*print)(void *));
 
-long	ft_lstget_mid(t_ptlist lst);
-
-long	ft_lstget_min(t_ptlist lst);
-
-t_list	*ft_lstget_node(t_ptlist lst, int index);
-
-int		ft_lstis_sorted(t_ptlist lst);
-
-void	ft_lstiter(t_ptlist lst, void (*f)(void *));
-
-t_list	*ft_lstlast(t_ptlist lst);
-
-t_list	*ft_lstmap(t_ptlist lst, void *(*f)(void *), void (*del)(void *));
-
-t_list	*ft_lstnew(void *content);
-
-int		ft_lstsize(t_ptlist lst);
-
-void	ft_lstsort(t_ptlist *lst, int len);
-
-void	ft_lstswap(t_ptlist n1, t_ptlist n2);
-
-#endif // LIST_H
+#endif // LINKEDLIST_H
