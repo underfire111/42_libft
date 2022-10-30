@@ -1,5 +1,5 @@
-#if !defined(SORT)
-#define SORT
+#if !defined(SORT_H)
+#define SORT_H
 
 void	ft_bubblesort(void *arr, int arr_size, int elem_size, int(*op)(void *, void *));
 
@@ -11,4 +11,4 @@ void	ft_selectionsort(void *arr, int arr_size, int elem_size, int(*op)(void *, v
 
 void	ft_swap(void *, void *, int size);
 
-#endif // SORT
+#endif // SORT_H

@@ -18,8 +18,8 @@ PATH_SRC		:= arraylist	\
 				   convert		\
 				   linkedlist	\
 				   memory		\
-				   sort			\
 				   put			\
+				   sort			\
 				   string		\
 				   type			\
 
