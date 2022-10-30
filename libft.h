@@ -14,7 +14,8 @@
 # define LIBFT_H
 
 # include "convert/convert.h"
-# include "linkedlist/linkedlist.h"
+# include "list/arraylist/arraylist.h"
+# include "list/linkedlist/linkedlist.h"
 # include "memory/memory.h"
 # include "put/put.h"
 # include "sort/sort.h"
