@@ -1,8 +1,0 @@
-{
-	"files.associations": {
-		"libft.h": "c",
-		"sort.h": "c",
-		"linkedlist.h": "c",
-		"node.h": "c"
-	}
-}

@@ -14,14 +14,14 @@
 NAME			:= libft.a
 
 # Directories
-PATH_SRC		:= arraylist	\
-				   convert		\
-				   linkedlist	\
-				   memory		\
-				   put			\
-				   sort			\
-				   string		\
-				   type			\
+PATH_SRC		:= convert			\
+				   list/arraylist	\
+				   list/linkedlist	\
+				   memory			\
+				   put				\
+				   sort				\
+				   string			\
+				   type				\
 
 PATH_OBJ		:= objects
 
