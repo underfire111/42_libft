@@ -1,31 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstis_sorted.c                                  :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ppereira <ppereira@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/23 13:03:27 by ppereira          #+#    #+#             */
-/*   Updated: 2022/05/05 16:05:00 by ppereira         ###   ########.fr       */
+/*   Created: 2021/02/25 13:34:05 by ppereira          #+#    #+#             */
+/*   Updated: 2022/05/11 17:20:33 by ppereira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "linked-list.h"
+#include "linkedlist.h"
 
-int	ft_lstis_sorted(t_ptlist lst)
+void	ft_lstadd_back(t_ptlist *lst, t_ptlist new)
 {
-	int	tmp;
-	
-	if (!lst)
-		return (0);
-	if (!lst->next)
-		return (1);
-	while (lst->next)
+	t_ptlist	temp;
+
+	if (!(*lst))
+		*lst = new;
+	else
 	{
-		tmp = (long)lst->content;
-		lst = lst->next;
-		if (tmp >= (long)lst->content)
-			return (0);
+		temp = ft_lstlast(*lst);
+		if (temp != NULL)
+			temp->next = new;
 	}
-	return (1);
 }

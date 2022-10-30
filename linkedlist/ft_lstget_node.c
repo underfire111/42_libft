@@ -1,26 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   array.h                                            :+:      :+:    :+:   */
+/*   ft_lstget_node.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ppereira <ppereira@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/23 13:05:49 by ppereira          #+#    #+#             */
-/*   Updated: 2022/04/23 13:05:50 by ppereira         ###   ########.fr       */
+/*   Created: 2022/04/23 13:03:24 by ppereira          #+#    #+#             */
+/*   Updated: 2022/05/05 16:06:55 by ppereira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#if !defined(ARRAY_H)
-# define ARRAY_H
+#include "linkedlist.h"
 
-int		ft_arrlen(void *arr);
-
-void	ft_bubble_sort(int *arr,int flag);
-
-void 	ft_quick_sort(int *arr, int low, int high);
-
-void	ft_selection_sort(int *arr, int flag);
-
-void	ft_swap(int *a, int *b);
-
-#endif // ARRAY_H
+t_ptlist	ft_lstget_node(t_ptlist lst, int index)
+{
+	if (!lst)
+		return (0);
+	while (index--)
+		lst = lst->next;
+	return (lst);
+}

@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "linked-list.h"
+#include "linkedlist.h"
 
 void	ft_lstadd_front(t_ptlist *lst, t_ptlist new)
 {

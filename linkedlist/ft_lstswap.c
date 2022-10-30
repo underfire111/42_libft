@@ -1,27 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   ft_lstswap.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ppereira <ppereira@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/25 13:34:05 by ppereira          #+#    #+#             */
-/*   Updated: 2022/05/11 17:20:33 by ppereira         ###   ########.fr       */
+/*   Created: 2022/04/23 13:03:32 by ppereira          #+#    #+#             */
+/*   Updated: 2022/05/05 16:07:04 by ppereira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "linked-list.h"
+#include "linkedlist.h"
 
-void	ft_lstadd_back(t_ptlist *lst, t_ptlist new)
+void	ft_lstswap(t_ptlist n1, t_ptlist n2)
 {
-	t_ptlist	temp;
+	void	*tmp;
 
-	if (!(*lst))
-		*lst = new;
-	else
-	{
-		temp = ft_lstlast(*lst);
-		if (temp != NULL)
-			temp->next = new;
-	}
+	tmp = n1->content;
+	n1->content = n2->content;
+	n2->content = tmp;
 }

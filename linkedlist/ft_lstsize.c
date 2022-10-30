@@ -1,19 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ppereira <ppereira@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/25 13:38:50 by ppereira          #+#    #+#             */
-/*   Updated: 2022/05/05 16:03:31 by ppereira         ###   ########.fr       */
+/*   Created: 2021/02/25 13:43:56 by ppereira          #+#    #+#             */
+/*   Updated: 2022/05/05 16:06:03 by ppereira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "linked-list.h"
+#include "linkedlist.h"
 
-void	ft_lstdelone(t_ptlist lst, void (*del)(void*))
+int	ft_lstsize(t_ptlist lst)
 {
-	(*del)(lst->content);
-	free(lst);
+	int	counter;
+
+	counter = 0;
+	while (lst)
+	{
+		counter++;
+		lst = lst->next;
+	}
+	return (counter);
 }

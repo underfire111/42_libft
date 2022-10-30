@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "linked-list.h"
+#include "linkedlist.h"
 
 void	ft_lstsort(t_ptlist *lst, int len)
 {

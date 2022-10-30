@@ -1,33 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstmap.c                                        :+:      :+:    :+:   */
+/*   ft_lstget_index.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ppereira <ppereira@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/02 13:04:45 by ppereira          #+#    #+#             */
-/*   Updated: 2022/05/05 16:06:30 by ppereira         ###   ########.fr       */
+/*   Created: 2022/04/23 13:03:05 by ppereira          #+#    #+#             */
+/*   Updated: 2022/05/11 16:39:24 by ppereira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "linked-list.h"
+#include "linkedlist.h"
 
-t_ptlist	ft_lstmap(t_ptlist lst, void *(*f)(void *), void (*del)(void *))
+int	ft_lstget_index(t_ptlist lst, long value)
 {
-	t_ptlist ptr;
-	t_ptlist tmp;
+	int	index;
 
-	ptr = NULL;
+	index = 0;
+	if (!lst)
+		return (-1);
 	while (lst)
 	{
-		tmp = ft_lstnew(f(lst->content));
-		if (!tmp)
-		{
-			ft_lstclear(&ptr, del);
-			return (NULL);
-		}
-		ft_lstadd_back(&ptr, tmp);
+		if ((long)lst->content == value)
+			return (index);
+		index++;
 		lst = lst->next;
 	}
-	return (ptr);
+	return (-1);
 }

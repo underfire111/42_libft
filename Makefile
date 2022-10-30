@@ -14,18 +14,19 @@
 NAME			:= libft.a
 
 # Directories
-PATH_SRC		:= array	\
-				   convert	\
-				   linked-list	\
-				   memory	\
-				   put		\
-				   string	\
-				   type		\
+PATH_SRC		:= arraylist	\
+				   convert		\
+				   linkedlist	\
+				   memory		\
+				   sort			\
+				   put			\
+				   string		\
+				   type			\
 
 PATH_OBJ		:= objects
 
 # Sources
-SRCS			:= $(shell find $(PATH_SRC) -name *.c)
+SRCS			:= $(shell find $(PATH_SRC) -name '*.c')
 
 # Objects
 OBJS			:= $(SRCS:%.c=$(PATH_OBJ)/%.o)

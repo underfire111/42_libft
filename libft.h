@@ -13,11 +13,11 @@
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include "array/array.h"
 # include "convert/convert.h"
-# include "linked-list/linked-list.h"
+# include "linkedlist/linkedlist.h"
 # include "memory/memory.h"
 # include "put/put.h"
+# include "sort/sort.h"
 # include "string/string.h"
 # include "type/type.h"
 

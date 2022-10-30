@@ -1,22 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstswap.c                                       :+:      :+:    :+:   */
+/*   ft_lstis_sorted.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ppereira <ppereira@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/23 13:03:32 by ppereira          #+#    #+#             */
-/*   Updated: 2022/05/05 16:07:04 by ppereira         ###   ########.fr       */
+/*   Created: 2022/04/23 13:03:27 by ppereira          #+#    #+#             */
+/*   Updated: 2022/05/05 16:05:00 by ppereira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "linked-list.h"
+#include "linkedlist.h"
 
-void	ft_lstswap(t_ptlist n1, t_ptlist n2)
+int	ft_lstis_sorted(t_ptlist lst)
 {
-	void	*tmp;
-
-	tmp = n1->content;
-	n1->content = n2->content;
-	n2->content = tmp;
+	int	tmp;
+	
+	if (!lst)
+		return (0);
+	if (!lst->next)
+		return (1);
+	while (lst->next)
+	{
+		tmp = (long)lst->content;
+		lst = lst->next;
+		if (tmp >= (long)lst->content)
+			return (0);
+	}
+	return (1);
 }

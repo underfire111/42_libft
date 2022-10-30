@@ -1,30 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdup.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ppereira <ppereira@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/23 13:05:30 by ppereira          #+#    #+#             */
-/*   Updated: 2022/05/05 16:07:31 by ppereira         ###   ########.fr       */
+/*   Created: 2021/03/02 13:04:45 by ppereira          #+#    #+#             */
+/*   Updated: 2022/05/05 16:06:30 by ppereira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "linked-list.h"
+#include "linkedlist.h"
 
-t_ptlist	ft_lstdup(t_ptlist lst)
+t_ptlist	ft_lstmap(t_ptlist lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_ptlist	new_lst;
-	t_ptlist	tmp;
+	t_ptlist ptr;
+	t_ptlist tmp;
 
-	new_lst = 0;
+	ptr = NULL;
 	while (lst)
 	{
-		tmp = ft_lstnew(lst->content);
+		tmp = ft_lstnew(f(lst->content));
 		if (!tmp)
-			return (0);
-		ft_lstadd_back(&new_lst, tmp);
+		{
+			ft_lstclear(&ptr, del);
+			return (NULL);
+		}
+		ft_lstadd_back(&ptr, tmp);
 		lst = lst->next;
 	}
-	return (new_lst);
+	return (ptr);
 }

@@ -1,22 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstget_node.c                                   :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ppereira <ppereira@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/23 13:03:24 by ppereira          #+#    #+#             */
-/*   Updated: 2022/05/05 16:06:55 by ppereira         ###   ########.fr       */
+/*   Created: 2021/02/25 13:37:26 by ppereira          #+#    #+#             */
+/*   Updated: 2022/05/05 16:03:07 by ppereira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "linked-list.h"
+#include "linkedlist.h"
 
-t_ptlist	ft_lstget_node(t_ptlist lst, int index)
+void	ft_lstclear(t_ptlist *lst, void (*del)(void*))
 {
+	t_ptlist	tmp;
+
 	if (!lst)
-		return (0);
-	while (index--)
-		lst = lst->next;
-	return (lst);
+		return ;
+	while (*lst)
+	{
+		tmp = (*lst)->next;
+		ft_lstdelone((*lst), del);
+		*lst = tmp;
+	}
 }

@@ -1,26 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize.c                                       :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ppereira <ppereira@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/25 13:43:56 by ppereira          #+#    #+#             */
-/*   Updated: 2022/05/05 16:06:03 by ppereira         ###   ########.fr       */
+/*   Created: 2021/02/25 13:42:48 by ppereira          #+#    #+#             */
+/*   Updated: 2022/05/05 16:05:56 by ppereira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "linked-list.h"
+#include "linkedlist.h"
 
-int	ft_lstsize(t_ptlist lst)
+t_ptlist	ft_lstnew(void *content)
 {
-	int	counter;
+	t_ptlist	ptr;
 
-	counter = 0;
-	while (lst)
-	{
-		counter++;
-		lst = lst->next;
-	}
-	return (counter);
+	ptr = (t_ptlist)malloc(sizeof(t_list));
+	if (!ptr)
+		return (NULL);
+	ptr->content = content;
+	ptr->next = NULL;
+	return (ptr);
 }

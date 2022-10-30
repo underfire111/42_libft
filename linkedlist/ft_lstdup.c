@@ -1,22 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_swap.c                                          :+:      :+:    :+:   */
+/*   ft_lstdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ppereira <ppereira@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/23 13:06:06 by ppereira          #+#    #+#             */
-/*   Updated: 2022/04/23 13:06:07 by ppereira         ###   ########.fr       */
+/*   Created: 2022/04/23 13:05:30 by ppereira          #+#    #+#             */
+/*   Updated: 2022/05/05 16:07:31 by ppereira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "array.h"
+#include "linkedlist.h"
 
-void	ft_swap(int *a, int *b)
+t_ptlist	ft_lstdup(t_ptlist lst)
 {
-	int	tmp;
+	t_ptlist	new_lst;
+	t_ptlist	tmp;
 
-	tmp = *a;
-	*a = *b;
-	*b = tmp;
+	new_lst = 0;
+	while (lst)
+	{
+		tmp = ft_lstnew(lst->content);
+		if (!tmp)
+			return (0);
+		ft_lstadd_back(&new_lst, tmp);
+		lst = lst->next;
+	}
+	return (new_lst);
 }

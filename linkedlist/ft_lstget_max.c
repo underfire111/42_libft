@@ -1,25 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstget_max.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ppereira <ppereira@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/25 13:42:48 by ppereira          #+#    #+#             */
-/*   Updated: 2022/05/05 16:05:56 by ppereira         ###   ########.fr       */
+/*   Created: 2022/04/23 13:03:21 by ppereira          #+#    #+#             */
+/*   Updated: 2022/05/05 16:04:05 by ppereira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "linked-list.h"
+#include "linkedlist.h"
 
-t_ptlist	ft_lstnew(void *content)
+long	ft_lstget_max(t_ptlist lst)
 {
-	t_ptlist	ptr;
+	long	max;
 
-	ptr = (t_ptlist)malloc(sizeof(t_list));
-	if (!ptr)
-		return (NULL);
-	ptr->content = content;
-	ptr->next = NULL;
-	return (ptr);
+	if (!lst)
+		return (INT_MAX);
+	max = (long int)lst->content;
+	while (lst)
+	{
+		if (max < (long int)lst->content)
+			max = (long int)lst->content;
+		lst = lst->next;
+	}
+	return (max);
 }
