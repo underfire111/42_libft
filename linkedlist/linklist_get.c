@@ -5,7 +5,7 @@ int	linklist_get(pt_linklist list, int rank, void *elem)
 	pt_node node;
 
 	if (!list)
-		return (NULL);
+		return (LIST_NULL);
 	if (rank < 0 || rank > list->size - 1)
 		return (LIST_INVALID_RANK);
 	node = linklist_nodeat(list, rank);

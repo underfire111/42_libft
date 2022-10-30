@@ -7,7 +7,7 @@ int	linklist_add(pt_linklist list, int rank, void *elem)
 	pt_node	newnode;
 
 	if (!list)
-		return (NULL);
+		return (LIST_NULL);
 	if (rank < 0 || rank > list->size - 1)
 		return (LIST_INVALID_RANK);
 	newnode = (pt_node)malloc(sizeof(t_node));

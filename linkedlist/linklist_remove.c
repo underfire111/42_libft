@@ -7,7 +7,7 @@ int	linklist_remove(pt_linklist list, int rank, void *elem)
 	pt_node nextnode;
 
 	if (!list)
-		return (NULL);
+		return (LIST_NULL);
 	if (list->size == 0)
 		return (LIST_EMPTY);
 	if (rank < 0 || rank > list->size - 1)
