@@ -1,8 +1,6 @@
 #if !defined(LINKEDLIST_H)
 #define LINKEDLIST_H
 
-# include "linklist_elem.h"
-
 #define NULL				(void *) 0
 #define LIST_OK				0
 #define LIST_NULL			1
@@ -15,6 +13,7 @@ struct			s_node;
 struct			s_linklist;
 typedef struct	s_node *pt_node;
 typedef struct	s_linklist *pt_linklist;
+typedef void	*t_elem;
 
 pt_linklist	linklist_create();
 

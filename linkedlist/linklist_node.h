@@ -2,6 +2,7 @@
 #define LINKLIST_NODE_H
 
 # include "linkedlist.h"
+
 # include <stdlib.h>
 
 typedef struct	s_node
