@@ -1,4 +1,4 @@
-#include "linklist_node.h"
+#include "linklist.h"
 
 int	linklist_get(pt_linklist list, int rank, t_elem *elem)
 {

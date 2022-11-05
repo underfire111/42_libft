@@ -1,5 +1,4 @@
-#include "linklist_node.h"
-#include "../../put/put.h"
+#include "linklist.h"
 
 void	linklist_print(pt_linklist list, void (*print)(t_elem))
 {

@@ -1,4 +1,4 @@
-#include "linklist_node.h"
+#include "linklist.h"
 
 pt_node	linklist_nodeat(pt_linklist list, int rank)
 {

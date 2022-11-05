@@ -1,4 +1,4 @@
-#include "linklist_node.h"
+#include "linklist.h"
 
 int	linklist_isempty(pt_linklist list)
 {

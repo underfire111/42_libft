@@ -1,4 +1,4 @@
-#include "linklist_node.h"
+#include "linklist.h"
 
 int	linklist(pt_linklist list)
 {

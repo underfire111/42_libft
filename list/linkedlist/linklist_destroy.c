@@ -1,4 +1,4 @@
-#include "linklist_node.h"
+#include "linklist.h"
 
 int	linklist_destroy(pt_linklist *pt_list)
 {

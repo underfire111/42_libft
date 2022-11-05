@@ -1,6 +1,7 @@
-#if !defined(LINKLIST_NODE_H)
-#define LINKLIST_NODE_H
+#if !defined(LINKLIST_H)
+#define LINKLIST_H
 
+# include "../../put/put.h"
 # include "linkedlist.h"
 
 # include <stdlib.h>
@@ -21,4 +22,4 @@ typedef struct s_linklist
 
 pt_node		linklist_nodeat(pt_linklist list, int rank);
 
-#endif // LINKLIST_NODE_H
+#endif // LINKLIST_H

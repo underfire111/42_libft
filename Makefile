@@ -51,7 +51,7 @@ FLAGS_COMP		:=	$(FLAG_WARNING) $(FLAG_MAKEFILE)
 REMOVE			:= rm -rf
 
 # Others
-ARRCS			:= ar rcs
+ARRCS			:= ar -rcs
 
 
 # Color Code and template code

@@ -1,4 +1,4 @@
-#include "linklist_node.h"
+#include "linklist.h"
 
 int	linklist_set(pt_linklist list, int rank, t_elem new_elem, t_elem *old_elem)
 {

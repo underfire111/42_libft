@@ -1,4 +1,4 @@
-#include "linklist_node.h"
+#include "linklist.h"
 
 pt_linklist	linklist_create()
 {

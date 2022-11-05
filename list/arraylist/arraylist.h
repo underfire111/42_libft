@@ -1,13 +1,13 @@
 #if !defined(ARRAY_LIST_H)
 # define ARRAY_LIST_H
 
-# define NULL				((void *) 0)
 # define LIST_OK			0
 # define LIST_NULL			1
 # define LIST_NO_MEMORY		2
 # define LIST_EMPTY			3
 # define LIST_FULL			4
 # define LIST_INVALID_RANK	5
+# define INITIAL_CAPACITY	10
 
 struct			s_node;
 struct			s_arrlist;
@@ -17,7 +17,7 @@ typedef void	*t_elem;
 
 pt_arrlist	arrlist_create();
 
-int			arrlist_destroy(pt_arrlist *list);
+int			arrlist_destroy(pt_arrlist *pt_list);
 
 int			arrlist_add(pt_arrlist list, int rank, t_elem elem);
 

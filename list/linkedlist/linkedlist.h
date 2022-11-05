@@ -1,7 +1,6 @@
 #if !defined(LINKEDLIST_H)
 # define LINKEDLIST_H
 
-# define NULL				((void *) 0)
 # define LIST_OK			0
 # define LIST_NULL			1
 # define LIST_NO_MEMORY		2
